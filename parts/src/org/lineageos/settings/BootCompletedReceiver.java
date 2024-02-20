@@ -26,6 +26,7 @@ import android.util.Log;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.dolby.DolbyUtils;
+import org.lineageos.settings.gestures.GestureUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.haptic.HapticUtils;
 
@@ -54,5 +55,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Haptic
         HapticUtils.restoreLevel(context);
+
+        // Gesture: Double tap FPS
+        if (GestureUtils.isFpDoubleTapEnabled(context)) {
+            GestureUtils.setFingerprintNavigation(true);
+        }
     }
 }

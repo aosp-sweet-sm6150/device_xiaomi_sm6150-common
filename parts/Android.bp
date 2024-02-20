@@ -17,6 +17,7 @@ android_app {
     overrides: ["MusicFX"],
     static_libs: [
         "org.lineageos.settings.resources",
+        "vendor.xiaomi.hardware.fingerprintextension-V1.0-java",
     ],
 
     optimize: {

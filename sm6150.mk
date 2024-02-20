@@ -108,6 +108,7 @@ PRODUCT_COPY_FILES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
+    KeyHandler \
     XiaomiParts
 
 # Dexpreopt
